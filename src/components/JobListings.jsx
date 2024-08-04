@@ -10,7 +10,7 @@ const JobListings = () => {
                     Browse Jobs
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {jobs.map((job) => {
+                    { Jobs.map((job) => {
                         <JobListing key={ job.id } job={ job }/>
                     })}
 
