@@ -1,8 +1,9 @@
-import React from 'react'
-import Jobs from '../jobs.json';
+import React from 'react';
 import JobListing from './JobListing';
-const JobListings = () => {
+import Jobs from '../jobs.json';
 
+const JobListings = () => {
+    console.log(Jobs);
     return (
         <section className="bg-blue-50 px-4 py-10">
             <div className="container-xl lg:container m-auto">
