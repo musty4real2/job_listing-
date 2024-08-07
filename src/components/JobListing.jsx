@@ -1,6 +1,6 @@
 import React from 'react'
 
-const JobListing = ({job}) => {
+const JobListing = ({ job }) => {
     return (
         <div className="bg-white rounded-xl shadow-md relative">
             <div className="p-4">
@@ -22,9 +22,7 @@ const JobListing = ({job}) => {
                         <i className="fa-solid fa-location-dot text-lg"></i>
                         {job.location}
                     </div>
-                    <a
-                        href={`/job/${job.id}`}
-                        className="h-[36px] bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg text-center text-sm"
+                    <a href={`/job/${job.id}`} className="h-[36px] bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg text-center text-sm"
                     >
                         Read More
                     </a>
