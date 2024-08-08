@@ -3,6 +3,7 @@ import {Route, createBrowserRouter,createRoutesFromElements, RouterProvider} fro
 import MainLayout from './layouts/MainLayout';
 import HomePage from './pages/HomePage';
 import JobsPage from './pages/JobsPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 
 
@@ -12,6 +13,7 @@ const router = createBrowserRouter(
   <Route path='/' element={<MainLayout />}>
   <Route index element={<HomePage />} />
   <Route path='/jobs' element={<JobsPage />} />
+  <Route path='*' element={<NotFoundPage />} />
   </Route>)
 );
 const App = () => {
@@ -20,13 +22,3 @@ const App = () => {
 };
 
 export default App;
-
-  // return (
-  //   // <>
-  //   //   <Navbar />
-  //   //   <Hero title="Become a React Dev" subtitle="Find the React job that fits your skills and needs" />
-  //   //   <HomeCards />
-  //   //   <JobListings />
-  //   //   <ViewAllJobs />
-  //   // </>
-  // )
