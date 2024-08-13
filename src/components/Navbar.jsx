@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from '../assets/images/logo.png';
-import {NavLinkLink} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 const Navbar = () => {
     return (
         <nav className="bg-indigo-700 border-b border-indigo-500">
