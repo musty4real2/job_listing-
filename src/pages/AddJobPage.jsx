@@ -1,17 +1,41 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 
-const AddJobPage = () => {
+const AddJobPage = ({ addJobSubmit}) => {
     const[title,setTitle]=useState('');
-    const[type,setType]=useState('');
+    const[type,setType]=useState('Full-Time');
     const[location,setLocation]=useState('');
     const[description,setDescription]=useState('');
-    const[salary,setSalary]=useState('');
+    const[salary,setSalary]=useState('Under $50K');
     const[companyName,setCompanyName]=useState('');
     const[companyDescription,setCompanyDescription]=useState('');
     const[companyEmail,setCompanyEmail]=useState('');
     const[companyPhone,setCompanyPhone]=useState('');
+
+    const navigate = useNavigate();
+
+    const submitForm = (e) =>{
+        e.preventDefault();
+
+        const newJob={
+            title,
+            type,
+            location,
+            description,
+            salary,
+            company:{
+                name:companyName,
+                description:companyDescription,
+                contactEmail:companyEmail,
+                contactPhone:companyPhone
+            }
+        }
+        addJobSubmit(newJob);
+
+        return navigate('/jobs');
+    };
     return (
         <>
             <section className="bg-indigo-50">
@@ -19,7 +43,7 @@ const AddJobPage = () => {
                     <div
                         className="bg-white px-6 py-8 mb-4 shadow-md rounded-md border m-4 md:m-0"
                     >
-                        <form>
+                        <form onSubmit={submitForm}>
                             <h2 className="text-3xl text-center font-semibold mb-6">Add Job</h2>
 
                             <div className="mb-4">
