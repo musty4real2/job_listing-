@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, useLoaderData, useNavigate, Link } from 'react-router-dom';
 import { FaArrowLeft, FaMapMarker } from 'react-icons/fa';
+import {Toast} from 'react-toastify';
 
 const JobPage = ({ deleteJob }) => {
     const navigate = useNavigate();
@@ -12,6 +13,7 @@ const JobPage = ({ deleteJob }) => {
         if (!confirm) return;
         try {
             await deleteJob(jobId);
+            toast.success("Job Deleted Successfully");
             navigate('/jobs');
         } catch (error) {
             console.error('Failed to delete the job:', error);
