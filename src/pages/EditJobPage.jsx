@@ -53,7 +53,7 @@ const EditJobPage = ({ updateJobSubmit }) => {
                 <div className="container m-auto max-w-2xl py-24">
                     <div className="bg-white px-6 py-8 mb-4 shadow-md rounded-md border m-4 md:m-0">
                         <form onSubmit={submitForm}>
-                            <h2 className="text-3xl text-center font-semibold mb-6">Edit {job.title}</h2>
+                            <h2 className="text-3xl text-center font-semibold mb-6">Update {job.title}</h2>
 
                             <div className="mb-4">
                                 <label htmlFor="type" className="block text-gray-700 font-bold mb-2">Job Type</label>
